@@ -1,0 +1,328 @@
+        :root {
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --accent-green: #4CAF50;
+            --accent-yellow: #FFC107;
+            --text-light: #ffffff;
+            --text-gray: #b0b0b0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Section */
+        header {
+            padding: 60px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .header-text {
+            flex: 1;
+        }
+        
+        .header-text h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        
+        .header-text p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .website-link {
+            color: var(--accent-yellow);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .profile-image {
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-left: 40px;
+        }
+        
+        .profile-image img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--text-light);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-green);
+        }
+        
+        /* Advantages Section */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .advantage-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .advantage-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-yellow);
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: var(--accent-green);
+            border-radius: 5px;
+        }
+        
+        .percentage {
+            text-align: right;
+            font-weight: bold;
+            color: var(--accent-yellow);
+        }
+        
+        /* Work Experience */
+        .experience-list {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .experience-item {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .experience-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .experience-details {
+            flex: 1;
+        }
+        
+        .experience-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .experience-company {
+            color: var(--text-gray);
+        }
+        
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--accent-yellow);
+            margin: 20px 0;
+        }
+        
+        .price::before {
+            content: '$';
+            font-size: 1.5rem;
+            vertical-align: super;
+        }
+        
+        .plan-name {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-green);
+        }
+        
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #3d8b40;
+        }
+        
+        /* Recent Work */
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .work-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .work-image {
+            height: 200px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-gray);
+        }
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+        }
+        .work-details {
+            padding: 20px;
+        }
+        
+        .work-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--accent-yellow);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .tech-item {
+            background-color: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin: 30px 0 0 0;
+                width: 300px;
+                height: 300px;
+            }
+            
+            .header-text h1 {
+                font-size: 2.5rem;
+            }
+            .tech-stack{
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+        }
